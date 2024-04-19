@@ -1,4 +1,4 @@
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import clsx from "clsx";
 import About from "../../pages/About/About";
 import Home from "../../pages/Home/Home";
