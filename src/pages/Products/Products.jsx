@@ -1,5 +1,6 @@
 import { getProducts } from "../../fakeAPI";
 import ProductsList from "../../components/App/ProductsList";
+import { Outlet } from "react-router-dom";
 
 const Products = () => {
   const product = getProducts();
@@ -7,6 +8,8 @@ const Products = () => {
   return (
     <>
       <ProductsList products={product} />
+
+      <Outlet />
     </>
   );
 };

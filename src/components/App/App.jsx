@@ -7,6 +7,7 @@ import ProductsDetails from "../../pages/ProductsDetails/ProductsDetails";
 import Mission from "../../pages/Mission/Mission";
 import Team from "../../pages/Team/Team";
 import Reviews from "../../pages/Reviews/Reviews";
+import ProductsList from "./ProductsList";
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
@@ -29,7 +30,8 @@ const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="/products" element={<Products />}>
-          <Route path="productsdetails" element={<ProductsDetails />} />
+          <Route path="productsdetails" element={<ProductsList />} />
+          <Route path="/products/:productId" element={<ProductsDetails />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
