@@ -1,7 +1,12 @@
+import { getProducts } from "../../fakeAPI";
+import ProductsList from "../../components/App/ProductsList";
+
 const Products = () => {
+  const product = getProducts();
+
   return (
     <>
-      <p>Products</p>
+      <ProductsList products={product} />
     </>
   );
 };
